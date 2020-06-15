@@ -124,6 +124,7 @@
             this.btnPartido.TabIndex = 9;
             this.btnPartido.Text = "Agregar";
             this.btnPartido.UseVisualStyleBackColor = true;
+            this.btnPartido.Click += new System.EventHandler(this.btnPartido_Click);
             // 
             // AgregarPartidos
             // 
@@ -142,6 +143,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarPartidos";
             this.Text = "AgregarPartidos";
+            this.Load += new System.EventHandler(this.AgregarPartidos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

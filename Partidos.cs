@@ -9,13 +9,13 @@ namespace Parcial2V2
     class Partidos
     {
         String local;
+        int gollocal;
         String visitante;
-        String glocal;
-        String gvisitante;
+        int golvisitante;
 
         public string Local { get => local; set => local = value; }
+        public int Gollocal { get => gollocal; set => gollocal = value; }
         public string Visitante { get => visitante; set => visitante = value; }
-        public string Glocal { get => glocal; set => glocal = value; }
-        public string Gvisitante { get => gvisitante; set => gvisitante = value; }
+        public int Golvisitante { get => golvisitante; set => golvisitante = value; }
     }
 }

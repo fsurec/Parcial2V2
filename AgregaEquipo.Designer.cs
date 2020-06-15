@@ -35,14 +35,16 @@
             this.txtCiudad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.fundacion = new System.Windows.Forms.DateTimePicker();
-            this.btnequipo = new System.Windows.Forms.Button();
+            this.AgregarEquipo = new System.Windows.Forms.Button();
+            this.dataequipos = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataequipos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(172, 38);
+            this.label1.Location = new System.Drawing.Point(133, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 20);
             this.label1.TabIndex = 2;
@@ -50,7 +52,7 @@
             // 
             // txtEquipo
             // 
-            this.txtEquipo.Location = new System.Drawing.Point(195, 94);
+            this.txtEquipo.Location = new System.Drawing.Point(156, 94);
             this.txtEquipo.Name = "txtEquipo";
             this.txtEquipo.Size = new System.Drawing.Size(200, 20);
             this.txtEquipo.TabIndex = 3;
@@ -58,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 101);
+            this.label2.Location = new System.Drawing.Point(31, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 4;
@@ -67,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 151);
+            this.label3.Location = new System.Drawing.Point(31, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 5;
@@ -75,7 +77,7 @@
             // 
             // txtCiudad
             // 
-            this.txtCiudad.Location = new System.Drawing.Point(195, 148);
+            this.txtCiudad.Location = new System.Drawing.Point(156, 148);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(200, 20);
             this.txtCiudad.TabIndex = 6;
@@ -83,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 212);
+            this.label4.Location = new System.Drawing.Point(31, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 7;
@@ -91,26 +93,36 @@
             // 
             // fundacion
             // 
-            this.fundacion.Location = new System.Drawing.Point(195, 206);
+            this.fundacion.Location = new System.Drawing.Point(156, 206);
             this.fundacion.Name = "fundacion";
             this.fundacion.Size = new System.Drawing.Size(200, 20);
             this.fundacion.TabIndex = 8;
             // 
-            // btnequipo
+            // AgregarEquipo
             // 
-            this.btnequipo.Location = new System.Drawing.Point(149, 272);
-            this.btnequipo.Name = "btnequipo";
-            this.btnequipo.Size = new System.Drawing.Size(169, 49);
-            this.btnequipo.TabIndex = 9;
-            this.btnequipo.Text = "Agregar Equipo";
-            this.btnequipo.UseVisualStyleBackColor = true;
+            this.AgregarEquipo.Location = new System.Drawing.Point(110, 272);
+            this.AgregarEquipo.Name = "AgregarEquipo";
+            this.AgregarEquipo.Size = new System.Drawing.Size(169, 49);
+            this.AgregarEquipo.TabIndex = 9;
+            this.AgregarEquipo.Text = "Agregar Equipo";
+            this.AgregarEquipo.UseVisualStyleBackColor = true;
+            this.AgregarEquipo.Click += new System.EventHandler(this.AgregarEquipo_Click);
+            // 
+            // dataequipos
+            // 
+            this.dataequipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataequipos.Location = new System.Drawing.Point(457, 85);
+            this.dataequipos.Name = "dataequipos";
+            this.dataequipos.Size = new System.Drawing.Size(240, 227);
+            this.dataequipos.TabIndex = 10;
             // 
             // AgregaEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 389);
-            this.Controls.Add(this.btnequipo);
+            this.ClientSize = new System.Drawing.Size(784, 389);
+            this.Controls.Add(this.dataequipos);
+            this.Controls.Add(this.AgregarEquipo);
             this.Controls.Add(this.fundacion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCiudad);
@@ -120,6 +132,8 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregaEquipo";
             this.Text = "AgregaEquipo";
+            this.Load += new System.EventHandler(this.AgregaEquipo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataequipos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,6 +148,7 @@
         private System.Windows.Forms.TextBox txtCiudad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker fundacion;
-        private System.Windows.Forms.Button btnequipo;
+        private System.Windows.Forms.Button AgregarEquipo;
+        private System.Windows.Forms.DataGridView dataequipos;
     }
 }

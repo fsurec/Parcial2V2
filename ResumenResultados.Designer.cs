@@ -84,6 +84,7 @@
             this.Controls.Add(this.dataResultados);
             this.Name = "ResumenResultados";
             this.Text = "ResumenResultados";
+            this.Load += new System.EventHandler(this.ResumenResultados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataResultados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
