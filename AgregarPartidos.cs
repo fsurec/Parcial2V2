@@ -47,7 +47,9 @@ namespace Parcial2V2
                 tempa.Local = reader3.ReadLine();
                 tempa.Gollocal = Convert.ToInt32(reader3.ReadLine()) ;
                 tempa.Visitante = reader3.ReadLine();
-                tempa.Golvisitante = Convert.ToInt32(reader3.Read());
+                tempa.Golvisitante = Convert.ToInt32(reader3.ReadLine());
+
+                partido.Add(tempa);
 
             }
             reader3.Close();
@@ -75,6 +77,12 @@ namespace Parcial2V2
                 writer2.WriteLine(s.Golvisitante);
             }
             writer2.Close();
+
+            listLocal.Text = null;
+            listVisit.Text = null;
+
+            gollocal.Text = null;
+            golvisit.Text = null;
         }
     }
 }

@@ -37,16 +37,30 @@ namespace Parcial2V2
                 tempa.Local = reader3.ReadLine();
                 tempa.Gollocal = Convert.ToInt32(reader3.ReadLine());
                 tempa.Visitante = reader3.ReadLine();
-                tempa.Golvisitante = Convert.ToInt32(reader3.Read());
+                tempa.Golvisitante = Convert.ToInt32(reader3.ReadLine());
 
                 partido.Add(tempa);
 
             }
+
+           
             reader3.Close();
 
             dataResultados.DataSource = null;
             dataResultados.DataSource = partido;
             dataResultados.Refresh();
+
+            int sum1, sum2, sum3;
+            sum1 = partido.Sum(x => x.Gollocal);
+            sum2 = partido.Sum(y => y.Golvisitante);
+
+            sum3 = sum1 + sum2;
+
+            totalgoles.Text = sum3.ToString();
+
         }
+            
     }
+
+        
 }
